@@ -14,3 +14,19 @@ build:
       - git fetch --unshallow || true
       - git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*' || true
       - git fetch --all --tags || true
+
+python:
+  install:
+    - requirements: docs/requirements.txt
+    # install our python package before building the docs
+    - method: pip
+      path: .
+
+sphinx:
+  configuration: docs/source/conf.py
+  fail_on_warning: true
+
+formats:
+  - pdf
+  - epub
+
