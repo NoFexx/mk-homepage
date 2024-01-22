@@ -1,24 +1,30 @@
 site_name: MkHomePage
 site_url: https://home.ipwnyour.biz
+repo_url: https://github.ipwnyour.biz/defalt/homepage/
+
 theme: 
   name: readthedocs
   locale: en
   highlightjs: true
+
 markdown_extensions:
   def_list: {}
   toc:
     permalink: 
     separator: "_"
   admonition: {}
+
 nav:
   - Home: index.md
   - About: about.md
-repo_url: https://github.ipwnyour.biz/defalt/homepage/
+  - Tutorial: tutorial/install.html
+
 exclude_docs: |
   api-config.json   # a file with this name anywhere
   drafts/           # a "drafts" directory anywhere
   /requirements.txt # top-level "docs/requirements.txt"
   *.py              # any file with this extension anywhere
   !/foo/example.py  # but keep this particular file
+
 extra:
   version: 1.0
